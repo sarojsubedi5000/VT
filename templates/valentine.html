@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Valentine 💘</title>
+    <style>
+        body {
+            background: radial-gradient(circle at top, #ff2e63, #0f0f0f);
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: "Segoe UI", Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .glow {
+            text-align: center;
+            animation: fadeIn 2s ease;
+        }
+
+        .name {
+            font-size: 52px;
+            animation: glow 2s infinite alternate;
+        }
+
+        .story {
+            font-size: 28px;
+            margin-top: 15px;
+            color: #ffd1dc;
+        }
+
+        .wish {
+            font-size: 20px;
+            margin-top: 25px;
+            line-height: 1.6;
+            color: #ffe6f0;
+            animation: slideUp 2s ease;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #ff2e63; }
+            to { text-shadow: 0 0 40px #ff9a9e; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(25px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .heart {
+            position: fixed;
+            bottom: -20px;
+            font-size: 22px;
+            animation: float 6s linear infinite;
+        }
+
+        @keyframes float {
+            from { transform: translateY(0); opacity: 1; }
+            to { transform: translateY(-100vh); opacity: 0; }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="glow">
+    <div class="name">💖 {{ name }} 💖</div>
+    <div class="story">Our Story Begins Now</div>
+
+    <div class="wish">
+        This Valentine’s Day, I don’t promise perfection…<br>
+        but I promise honesty, laughter, support, and a heart<br>
+        that chooses you — today, tomorrow, and always. 🌹<br><br>
+
+        May our days be filled with smiles,<br>
+        our nights with dreams,<br>
+        and our journey with love that only grows stronger. 💞<br><br>
+
+        Happy Valentine’s Day 2026 ❤️
+    </div>
+</div>
+
+<script>
+    // Floating hearts
+    setInterval(() => {
+        const heart = document.createElement("div");
+        heart.className = "heart";
+        heart.innerHTML = "💖";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = (4 + Math.random() * 4) + "s";
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 8000);
+    }, 600);
+</script>
+
+</body>
+</html>

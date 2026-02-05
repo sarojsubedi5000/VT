@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Name 💖</title>
+    <style>
+        body {
+            background: radial-gradient(circle at top, #ff2e63, #0f0f0f);
+            font-family: "Segoe UI", Arial, sans-serif;
+            text-align: center;
+            color: white;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.12);
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 0 40px rgba(255,46,99,0.6);
+            animation: fadeIn 1.5s ease;
+        }
+
+        input {
+            padding: 14px;
+            font-size: 18px;
+            border-radius: 30px;
+            border: none;
+            text-align: center;
+            width: 260px;
+        }
+
+        button {
+            margin-top: 25px;
+            padding: 14px 35px;
+            font-size: 18px;
+            border-radius: 30px;
+            border: none;
+            background: #2ecc71;
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 0 15px #2ecc71;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0; transform: scale(0.9);}
+            to {opacity: 1; transform: scale(1);}
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>💌 Before we begin…</h2>
+    <h3>Enter your <b>first name</b> 💖</h3>
+
+    <form method="POST">
+        <input type="text" name="name" placeholder="Your first name" required>
+        <br>
+        <button type="submit">Continue 💫</button>
+    </form>
+</div>
+
+</body>
+</html>
